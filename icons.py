@@ -6,13 +6,13 @@ d = (0,0,0)
 
 wifi = [
 d,d,d,d,d,d,d,d,
-d,d,g,g,g,g,d,d,
-d,g,d,d,d,d,g,d,
-g,d,d,d,d,d,d,g,
-d,d,d,g,g,d,d,d,
-d,d,g,d,d,g,d,d,
+d,d,b,b,b,b,d,d,
+d,b,d,d,d,d,b,d,
+b,d,d,d,d,d,d,b,
+d,d,d,b,b,d,d,d,
+d,d,b,d,d,b,d,d,
 d,d,d,d,d,d,d,d,
-d,d,d,g,g,d,d,d
+d,d,d,b,b,d,d,d
 ]
 
 no_wifi = [
