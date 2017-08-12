@@ -3,6 +3,7 @@ import time
 import datetime
 import json
 import requests
+import icons
 from sense_hat import SenseHat
 
 
@@ -77,7 +78,7 @@ while True:
   f.close()
   sense.show_message("%.1f" % (t_corr_f))
   if sendOK:
-    sense.show_letter("K")
+    sense.set_pixels(wifi)
   else:
     snese.show_letter("X") 
 
