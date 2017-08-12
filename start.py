@@ -80,7 +80,7 @@ while True:
   if sendOK:
     sense.set_pixels(icons.wifi)
   else:
-    snese.show_letter("X") 
+    sense.set_pixels(icons.no_wifi)
 
   time.sleep(5)
 
