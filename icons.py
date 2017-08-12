@@ -5,11 +5,11 @@ d = (0,0,0)
 
 wifi = [
 d,d,d,d,d,d,d,d,
-d,d,r,r,r,r,d,d,
-d,r,d,d,d,d,r,d,
-r,d,d,d,d,d,d,r,
-d,d,d,r,r,d,d,d,
-d,d,r,d,d,r,d,d,
+d,d,b,b,b,b,d,d,
+d,b,d,d,d,d,b,d,
+b,d,d,d,d,d,d,b,
+d,d,d,b,b,d,d,d,
+d,d,b,d,d,b,d,d,
 d,d,d,d,d,d,d,d,
-d,d,d,r,r,d,d,d
+d,d,d,b,b,d,d,d
 ]
