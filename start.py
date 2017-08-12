@@ -9,10 +9,6 @@ from sense_hat import SenseHat
 
 webhook_url='https://qa-dataflownode.zerionsoftware.com/domain/zerionint/services/webhooks/2f8dc4cd1dca6e7fa75e49271e0562af15481153-5b85c24a0ee8b07f247cd0c3a740bf16b7583510'
 
-g = (0,255,0)
-r = (255,0,0)
-b = (0,0,255)
-
 sense = SenseHat()
 
 def sendToZerion(data):
@@ -48,12 +44,6 @@ def get_smooth(x):
 
 
 filename = "/home/pi/data/data_%s.js" % datetime.datetime.now()
-
-# Sleep for 20 seconds, wait for network to start
-#for x in range (0,8):
-#  sense.set_pixel(x,0,(255,0,0))
-#  time.sleep(2)
-
 
 
 while True:
