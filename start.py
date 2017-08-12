@@ -78,7 +78,7 @@ while True:
   f.close()
   sense.show_message("%.1f" % (t_corr_f))
   if sendOK:
-    sense.set_pixels(wifi)
+    sense.set_pixels(icons.wifi)
   else:
     snese.show_letter("X") 
 
