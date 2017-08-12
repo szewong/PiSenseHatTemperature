@@ -18,12 +18,14 @@ def sendToZerion(data):
     try:
       response = requests.post(webhook_url, data, headers={'Content-Type':'application/json'})
       print(response.text)
+      return True
       # sense.set_pixel(0,0,(0,255,0))
-      sense.show_letter("O",(0,255,0))
+      # sense.show_letter("O",(0,255,0))
     except requests.exceptions.RequestException as e:
       print(e)
+      return False
       # sense.set_pixel(0,0,(255,0,0))
-      sense.show_letter("O",(255,0,0))
+      # sense.show_letter("O",(255,0,0))
 
 
 
@@ -70,11 +72,14 @@ while True:
   nowt = datetime.datetime.now()
   data = '{"time":"%s", "temperature":%.2f, "temperature_corrected":%.2f,  "humidity":%.2f,  "pressure":%.2f}' % (nowt, t, t_corr_f, h, p)
 
-  sendToZerion(data)
+  sendOK = sendToZerion(data)
   f.write("%s,\n" % data)
   f.close()
-  time.sleep(0.5)
   sense.show_message("%.1f" % (t_corr_f))
+  if sendOK:
+    sense.show_letter("K")
+  else:
+    snese.show_letter("X") 
 
   time.sleep(5)
 
