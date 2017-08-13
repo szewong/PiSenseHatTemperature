@@ -48,6 +48,7 @@ def get_pixel_array(file_name):
 	start_pixel = 0
 	
 	while start_pixel < (image_width*64):
-    	png_file.extend(image_pixels[start_pixel:(
-			start_pixel+image_width):pixel_width])
-    	start_pixel += (image_width*pixel_width)
+		png_file.extend(image_pixels[start_pixel:(start_pixel+image_width):pixel_width])
+		start_pixel += (image_width*pixel_width)
+
+	return png_file	
