@@ -42,7 +42,7 @@ def get_pixel_array(file_name):
 	image_pixels = list(rgb_img.getdata())
  
 	# Get the 64 pixels you need
-	pixel_width = 6
+	pixel_width = 1
 	image_width = pixel_width*8
 	png_file = []
 	start_pixel = 0
