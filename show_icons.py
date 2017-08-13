@@ -1,18 +1,13 @@
 import icons
 import time
+import os
 from sense_hat import SenseHat
 sense = SenseHat()
 
+for file in os.listdir("./img"):
+    if file.endswith(".png"):
+		sense.set_pixels(icons.get_pixel_array(file))
+		time.sleep(1)
 
-sense.set_pixels(icons.get_pixel_array("sprite_0.png"))
-time.sleep(1)
-sense.set_pixels(icons.get_pixel_array("sprite_1.png"))
-time.sleep(1)
-sense.set_pixels(icons.get_pixel_array("sprite_2.png"))
-time.sleep(1)
-sense.set_pixels(icons.get_pixel_array("sprite_3.png"))
-time.sleep(1)
-sense.set_pixels(icons.get_pixel_array("sprite_4.png"))
-time.sleep(1)
-sense.set_pixels(icons.get_pixel_array("sprite_5.png"))
-time.sleep(1)
+
+sense.clear()
