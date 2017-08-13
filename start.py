@@ -69,7 +69,7 @@ while True:
   sense.show_message("%.1f" % (t_corr_f))
   if sendOK:
     #sense.set_pixels(icons.wifi)
-    sense.set_pixels(icons.png_file)
+    sense.set_pixels(icons.get_pixel_array("sprite_0.png"))
   else:
     sense.set_pixels(icons.no_wifi)
 

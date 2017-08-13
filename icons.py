@@ -31,22 +31,23 @@ d,d,d,g,g,d,d,d
 
 #code from 
 # https://www.raspberrypi.org/magpi/pixel-art-on-sense-hat/
-
-# Open image file
-image_file = os.path.join(
-os.sep,"/home","pi","PiHAT","img","sprite_0.png")
-img = Image.open(image_file)
+def get_pixel_array(file_name):
+	# Open image file
+	image_file = os.path.join(
+	os.sep,"/home","pi","PiHAT","img",file_name)
+	img = Image.open(image_file)
  
-# Generate rgb values for image pixels
-rgb_img = img.convert('RGB')
-image_pixels = list(rgb_img.getdata())
+	# Generate rgb values for image pixels
+	rgb_img = img.convert('RGB')
+	image_pixels = list(rgb_img.getdata())
  
-# Get the 64 pixels you need
-pixel_width = 6
-image_width = pixel_width*8
-png_file = []
-start_pixel = 0
-while start_pixel < (image_width*64):
-    png_file.extend(image_pixels[start_pixel:(
-start_pixel+image_width):pixel_width])
-    start_pixel += (image_width*pixel_width)
+	# Get the 64 pixels you need
+	pixel_width = 6
+	image_width = pixel_width*8
+	png_file = []
+	start_pixel = 0
+	
+	while start_pixel < (image_width*64):
+    	png_file.extend(image_pixels[start_pixel:(
+	start_pixel+image_width):pixel_width])
+    	start_pixel += (image_width*pixel_width)
