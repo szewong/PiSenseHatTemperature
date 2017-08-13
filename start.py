@@ -68,9 +68,11 @@ while True:
   f.close()
   sense.show_message("%.1f" % (t_corr_f))
   if sendOK:
-    sense.set_pixels(icons.wifi)
+    #sense.set_pixels(icons.wifi)
+    sense.set_pixels(icons.png_file)
   else:
     sense.set_pixels(icons.no_wifi)
+
 
   time.sleep(5)
 
