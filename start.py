@@ -62,7 +62,6 @@ while True:
 
   nowt = datetime.datetime.now()
 
-  {datetime.datetime.now():%Y-%m-%d}
   data = '{"time":"%s", "temperature":%.2f, "temperature_corrected":%.2f,  "humidity":%.2f,  "pressure":%.2f}' % ( nowt.strftime("%Y/%m/%d %H:%M:%S") , t, t_corr_f, h, p)
 
   sendOK = sendToZerion(data)
