@@ -61,7 +61,9 @@ while True:
   t_corr_f = t_corr * 9 / 5 + 32
 
   nowt = datetime.datetime.now()
-  data = '{"time":"%s", "temperature":%.2f, "temperature_corrected":%.2f,  "humidity":%.2f,  "pressure":%.2f}' % (nowt, t, t_corr_f, h, p)
+
+  {datetime.datetime.now():%Y-%m-%d}
+  data = '{"time":"%s", "temperature":%.2f, "temperature_corrected":%.2f,  "humidity":%.2f,  "pressure":%.2f}' % ( nowt.strftime("%Y/%m/%d %H:%M:%S") , t, t_corr_f, h, p)
 
   sendOK = sendToZerion(data)
   f.write("%s,\n" % data)

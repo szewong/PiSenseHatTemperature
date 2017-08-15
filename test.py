@@ -1,3 +1,10 @@
+import datetime
+
+nowt = datetime.datetime.now()
+print nowt.strftime("%Y/%m/%d %H:%M:%S")
+
+
+
 def t1():
 	a = 1
 	while a > 2:
@@ -9,3 +16,6 @@ def t1():
 "1")
 
 t1()
+
+
+
